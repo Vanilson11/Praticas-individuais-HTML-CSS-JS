@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-queries.css">
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="img">
+                <!--Imagem de fundo-->
+            </div>
+
+            <div id="forms">
+                <form action="login.php" method="post" autocomplete="on">
+
+                    <h1>Bem-vindo (a), Hashira.</h1>
+                    <p>Faça login para entrar na sua conta.</p>
+
+                    <div class="campo">
+                        <input type="text" name="user" id="iuser" autocomplete="username" required minlength="8" maxlength="20" placeholder="Nome de usuário">
+                        <label for="iuser">Usuário</label>
+                    </div>
+
+                    <div class="campo">
+                        <input type="password" name="sen" id="isen" required minlength="6" maxlength="10" autocomplete="current-password" placeholder="Digite sua senha">
+                        <label for="isen">Senha</label>
+                    </div>
+
+                    <input type="submit" value="Entrar">
+
+                    <a href="#" class="esqueci">Esqueci minha senha</a>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

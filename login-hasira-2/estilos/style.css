@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Versão Mobile */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: #241b38;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+div#container{
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.637);
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+div#img{
+    background: url(../imagens/fundo-g.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+}
+
+div#container > div#forms > form{
+    padding: 10px;
+    text-align: center;
+}
+
+div#forms > form > h1{
+    color: #241b38;
+}
+
+div#forms > form > p{
+    margin: 10px 0px;
+}
+
+form > div.campo > label{
+    display: none;
+}
+
+form > div.campo > input{
+    background-color: #241b38;
+    color: white;
+    width: 80%;
+    height: 40px;
+    margin: 5px 0px;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+}
+
+form > div.campo > input:hover{
+    transform: translateX(-10px);
+    transition: .3s;
+}
+
+form > div.campo > input:focus-within{
+    background-color: white;
+}
+
+form > input[type=submit]{
+    display: block;
+    background-color: #241b38;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    margin: auto;
+    border: none;
+    border-radius: 7px;
+}
+
+form > input[type=submit]:hover{
+    background-color: white;
+    color: #241b38;
+    border: 1px solid #241b38;
+}
+
+form > input[type=submit]:active{
+    background-color: #241b38;
+    color: white;
+    border: none;
+}
+
+form > a.esqueci{
+    display: block;
+    background-color: white;
+    color: #241b38;
+    text-decoration: none;
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid #241b38;
+    border-radius: 7px;
+}
+
+form > a.esqueci:hover{
+    background-color: #241b38;
+    color: white;
+}
+
+form > a.esqueci:active{
+    background-color: white;
+    color: #241b38;
+    border: 1px solid #241b38;
+}

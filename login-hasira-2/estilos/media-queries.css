@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*Versão Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    div#container{
+        width: 600px;
+        height: 380px;
+    }
+
+    div#container > div#img{
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+
+    div#container > div#forms{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/* Versão Desktop */
+
+@media screen and (min-width: 992px){
+    div#container{
+        width: 750px;
+        height: 350px;
+    }
+
+    div#container > div#img{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    div#container > div#forms{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+}

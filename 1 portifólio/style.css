@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+header > a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+header > a:hover{
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 40px;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+main > div#txt{
+    width: 60%;
+    padding: 10px;
+    
+}
+
+main > div#txt > h2{
+    font-size: 2em;
+    color: rgb(11, 11, 78);
+    line-height: 35px;
+
+}
+
+main > div#txt > p{
+    text-align: justify;
+    line-height: 25px;
+    width: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main > div#txt > a.down{
+    background-color: rgb(255, 107, 107);
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.24);
+    font-weight: 530;
+    display: block;
+    width: 150px;
+    height: 35px;
+    padding: 7px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.26);
+}
+
+main > div#img0 > img{
+    width: 250px;
+}
+
+main > div#img0 > img:hover{
+    transform: translateY(-10px);
+    transition: .4s;
+    transition-timing-function: ease;
+}
+
+aside{
+    background-color: rgb(11, 11, 78);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px 30px;
+    height: 460px;
+    padding: 20px;
+}
+
+aside > h2{
+    color: white;
+    font-size: 1.8em;
+    font-weight: 400;
+    opacity: .8;
+    align-self: flex-start;
+    /*position: absolute;
+    top: 470px;
+    left: 50px;*/
+}
+
+aside > div#project{
+    background-color: white;
+    width: 800px;
+    margin-top: 50px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+aside > div#project:hover{
+    transform: translateY(-10px);
+    transition: .4s;
+    transition-timing-function: ease;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.541);
+}
+
+aside > div#project > div#img01{
+   background: url(https://i.ibb.co/PGy28pT/projeto1.jpg) no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 200px;
+}
+
+aside > div#project > div#text{
+    line-height: 24px;
+    padding: 20px;
+}
+
+aside > div#project > div#text > h3{
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+aside > div#project > div#img02{
+    background: url(https://i.ibb.co/MkMmmNN/projeto2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
