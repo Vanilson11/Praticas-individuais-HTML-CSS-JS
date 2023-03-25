@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você pode votar?</title>
+</head>
+<body>
+  <h1>Descubra se você já possui idade para votar </h1>  
+  Digite aqui o ano do seu nascimento: <input type="number" name="nasc" id="nasc">
+  <input type="button" value="Enviar" onclick="calc()">
+
+  <div id="res">Resultado</div>
+
+  <script>   
+    function calc(){
+        var nasc = document.getElementById('nasc')
+        var ano = Number(nasc.value)
+        var idade = 2023 - ano
+        var res = document.getElementById('res')
+        res.innerHTML = `<p>Você nasceu no ano <strong>${ano}</strong>.`
+        res.innerHTML += `<p>A sua idade é de <strong>${idade}</strong> anos.</p>`
+        if(idade >= 16){
+            res.innerHTML += `<p>Você já possui idade para votar!`
+        } else{
+            res.innerHTML += `Você ainda não possui idade para votar`
+        }
+    }
+    
+  </script>
+</body>
+</html>

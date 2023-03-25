@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontos</title>
+</head>
+<body>
+    <h1>Promoção Dia da Mulher</h1>
+    <h3>Descontos para todos!</h3>
+    Nome do(a) cliente: <input type="text" name="nome" id="nome"> <br>
+    Sexo: <input type="text" name="sexo" id="sexo" placeholder="M ou F"> <br>
+    Valor das compras: <input type="number" name="compras" id="compras"> <br>
+
+    <input type="button" value="Calcular" onclick="calc()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function calc(){
+            var nome = document.getElementById('nome')
+            var name = (nome.value)
+            var sexo = document.getElementById('sexo')
+            var smf = (sexo.value)
+            var compras = document.getElementById('compras')
+            var buy = (compras.value)
+            var des = 0
+            var totbuy = 0
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Cliente: <strong>${name}</strong>.</p> <p>Sexo: <strong>${smf}</strong>.</p>`
+            res.innerHTML += `<p>Valor das compras: <strong>R$${buy}</strong>.`
+            if(smf == 'F'){
+                var des = (13 * buy)/100
+                var totbuy = buy - des
+                res.innerHTML += `<p>O valor das suas compras com 13% de desconto sairá por: <strong>${totbuy.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</strong>. Obrigado pela preferência!</p>`
+            } else{
+                var des = (5 * buy)/100
+                var totbuy = buy - des
+                res.innerHTML += `<p>O valor das suas compras com 5% de desconto sairá por: <strong>${totbuy.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</strong>. Obrigado pela preferência!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

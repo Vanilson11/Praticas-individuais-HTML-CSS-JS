@@ -1,0 +1,91 @@
+/* Versão Mobile */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+:root{
+    --font1: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: rgb(212, 233, 240);
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font1);
+    font-weight: bolder;
+    font-size: 1.8em;
+    color: blue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.26);
+    padding: 30px;
+}
+
+div#container{
+    background-color: white;
+    text-align: center;
+    width: 280px;
+    height: 250px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
+}
+
+div#container > input[type=text]{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+
+div#container > input[type=button]{
+    background-color: rgb(48, 48, 248);
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.301);
+    width: 60%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.404)
+}
+
+div#container > input[type=button]:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+div#container > input[type=button]:active{
+    background-color: rgb(48, 48, 248);
+}
+
+div#res{
+    display: none;
+    background-color: white;
+    text-align: center;
+    font-size: 1.2em;
+    width: 280px;
+    height: 80px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
+}

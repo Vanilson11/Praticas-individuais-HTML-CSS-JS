@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alistamento Militar</title>
+</head>
+<body>
+    <h1>Você já tem idade para se alistar? Veja aqui.</h1>
+    Digite aqui seu nome: <input type="text" name="nome" id="nome"> <br>
+    Informe aqui o ano em que você nasceu: <input type="number" name="nas" id="nas"> <br>
+    
+    <input type="button" value="Verficar" onclick="verificar()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function verificar(){
+            var nome = document.getElementById('nome')
+            var name = (nome.value)
+            var nas = document.getElementById('nas')
+            var ano = Number(nas.value)
+            var idade = 2023 - ano
+            var diferença = 0
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Olá, <strong>${name}</strong>.</p>`
+            res.innerHTML += `<p>A sua idade é de <strong>${idade}</strong> anos.<p/>`
+            if (idade < 18){
+                var diferença = (18-idade)
+                res.innerHTML += `<p>Ainda faltam <strong>${diferença}</strong> anos até o seu alistamento.</p>`
+            } else {
+                var diferença = (idade - 18)
+                res.innerHTML += `<p>Você já passou <strong>${diferença}</strong> anos do período indicado para o alistamento. Apresse-se!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

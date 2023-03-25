@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+</head>
+<body>
+    <h1>Descubra se o número é par ou ímpar</h1>
+    Digite o número aqui: <input type="number" name="num" id="num">
+    <input type="button" value="Verificar" onclick="verficar()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function verficar(){
+            var num = document.getElementById('num')
+            var n1 = Number(num.value)
+            var res = document.getElementById('res')
+            if (n1 % 2 == 0){
+                res.innerHTML = `<p>O número <strong>${n1}</strong> é <strong>PAR</strong>.</p>`
+            } else {
+                res.innerHTML += `<p>O número <strong>${n1}</strong> é <strong>ÍMPAR</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

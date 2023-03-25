@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de carros</title>
+</head>
+<body>
+    <h1>Calcule os preços do aluguel do carro.</h1>
+
+    <input type="radio" name="carro" id="carroN" checked> 
+    <label for="carroP">Carro Popular (R$ 90,00 por dia)</label> <br>
+    <input type="radio" name="carro" id="carroL">
+    <label for="carroL">Carro de Luxo (R$ 150,00 por dia)</label> <br>
+    Dias de aluguel: <input type="number" name="aludia" id="aludia"> <br>
+    Km percorridos: <input type="number" name="km" id="km"> <br>
+    <input type="button" value="Calcular" onclick="calcular()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function calcular(){
+            var carro = document.getElementsByName('carro')
+            var dias = document.getElementById('aludia')
+            var km = document.getElementById('km')
+            var carroP = 90
+            var carroL = 150
+            var typecar = ''
+            var Totcarro = ''
+            var TotKm = ''
+            var TotFinal = ''
+            var res = document.getElementById('res')
+            if (carro[0].checked){
+                typecar = 'Carro Popular'
+                Totcarro = carroP * Number(dias.value)
+                if (km.value <= 100){
+                    TotKm = Number(km.value) * 0.20
+                    TotFinal = Totcarro + TotKm
+                    res.innerHTML = `Você alugou um <strong>${typecar} por <strong>${Number(dias.value)} dias</strong>. <p>Percorreu <strong>${Number(km.value)}</strong> km.`
+                    res.innerHTML += `</p> <p>O valor total a pagar será de <strong>${Number(TotFinal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>. </p>`
+                }
+            } else if (carro[1].checked){
+                typecar = 'Carro de Luxo'
+                Totcarro = carroL * Number(dias.value)
+                if (km.value > 100){
+                    TotKm = Number(km.value) * 0.10
+                    TotFinal = Totcarro + TotKm
+                    res.innerHTML = `Você alugou um <strong>${typecar} por <strong>${Number(dias.value)} dias</strong>. <p>Percorreu <strong>${Number(km.value)}</strong> km.`
+                    res.innerHTML += `</p> <p>O valor total a pagar será de <strong>${Number(TotFinal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>. </p>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas de exercícios</title>
+</head>
+<body>
+    <h1>Verifique sua pontuação de horas de exercícios</h1>
+
+    Quantas horas de atividades físicas você teve nesse mês? <input type="number" name="horaexer" id="horaexer"> <br>
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function verificar(){
+            var hora = document.getElementById('horaexer')
+            var points = ''
+            var money = ''
+            var res = document.getElementById('res')
+            if (hora.value <= 10){
+                points = Number(hora.value) * 2
+                money = points * 0.05
+                res.innerHTML = `Você praticou exercícios físicos por <strong>${hora.value}</strong> horas nesse mês e obteve um total de <strong>${points} pontos</strong>. <p>Sua sua remuneração é de <strong>${Number(money).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+            } else if(hora.value <= 20){
+                points = Number(hora.value) * 5
+                money = Number(points) * 0.05
+                res.innerHTML = `Você praticou exercícios físicos por <strong>${hora.value}</strong> horas nesse mês e obteve um total de <strong>${points} pontos</strong>. <p>Sua sua remuneração é de <strong>${Number(money).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+            } else{
+                points = Number(hora.value) * 10
+                money = Number(points) * 0.05
+                res.innerHTML = `Você praticou exercícios físicos por <strong>${hora.value}</strong> horas nesse mês e obteve um total de <strong>${points} pontos</strong>. <p>Sua sua remuneração é de <strong>${Number(money).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

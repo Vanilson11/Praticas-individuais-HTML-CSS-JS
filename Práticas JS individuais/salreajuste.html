@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de salários</title>
+</head>
+<body>
+    <h1>Vamos calcular o reajuste do seu salário.</h1>
+
+    Informe seu salário atual: <input type="number" name="salat" id="salat"> <br>
+    Informe seu gênero:
+    <input type="radio" name="radsex" id="mas" checked>
+    <label for="mas">Masculino</label>
+    <input type="radio" name="radsex" id="fem">
+    <label for="fem">Feminino</label> <br>
+    Há quantos anos você trabalha nessa empresa? <input type="number" name="anos" id="anos">
+    <input type="button" value="Calcular" onclick="calcular()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var salat = document.getElementById('salat')
+            var fsex = document.getElementsByName('radsex')
+            var anos = document.getElementById('anos')
+            var porcen = ''
+            var novosal = ''
+            var res = document.getElementById('res')
+            if (fsex[1].checked){
+                if (anos.value < 15){
+                    porcen = (5 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 5 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                } else if(anos.value < 20){
+                    porcen = (12 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 12 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                } else {
+                    porcen = (23 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 23 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                }
+            } else{
+                if (anos.value < 20){
+                    porcen = (3 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 3 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                } else if(anos.value < 30){
+                    porcen = (13 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 13 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                } else {
+                    porcen = (25 * Number(salat.value))/100
+                    novosal = Number(salat.value) + porcen
+                    res.innerHTML = `<p>Seu novo salário com acréscimo de 25 % é de <strong>${Number(novosal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>.</p>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

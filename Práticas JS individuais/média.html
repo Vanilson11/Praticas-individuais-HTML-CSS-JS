@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando médias</title>
+</head>
+<body>
+    <h1>Calcule a média do aluno para saber se ele está aprovado ou reprovado</h1>
+    Digite o nome do aluno(a): <input type="text" name="nome" id="nome"> <br>
+    Digite aqui a primeira nota do aluno(a): <input type="number" name="nota1" id="nota1"> <br>
+    Digite aqui a segunda nota do aluno(a): <input type="number" name="nota2" id="nota2"> <br>
+    <input type="button" value="Calcular" onclick="calc()">
+
+    <div id="res">Resultado</div>
+
+    <script>
+        function calc(){
+            var nome = document.getElementById('nome')
+            var name = (nome.value)
+            var nota1 = document.getElementById('nota1')
+            var n1 = Number(nota1.value)
+            var nota2 = document.getElementById('nota2')
+            var n2 = Number(nota2.value)
+            var media = (n1 + n2)/2
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Aluno: <strong>${name}</strong>.</p>`
+            res.innerHTML += `<p>A primeira nota de <strong>${name}</strong> é <strong>${n1}</strong>.</p>`
+            res.innerHTML += `<p>A segunda nota de <strong>${name}</strong> é <strong>${n2}</strong>.</p>`
+            res.innerHTML += `<p>A média de <strong>${name}</strong> é <strong>${media}</strong>.</p>`
+            if(media >= 7){
+                res.innerHTML += `<p>O aluno está <strong>APROVADO</strong>.</p>`
+            } else{
+                res.innerHTML += `<p>O aluno está <strong>REPROVADO</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
