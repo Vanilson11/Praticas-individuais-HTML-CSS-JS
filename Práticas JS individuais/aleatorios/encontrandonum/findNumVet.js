@@ -12,16 +12,15 @@ function buscar(){
         }
         res.innerHTML = `<p>Os números gerados pelo computador foram ${vet}.</p>`
         if(vet.indexOf(Number(num.value)) != -1){
-            for(let pos = 0; pos <= 30; pos++){
+            for(let pos in vet){
                 if(vet[pos] == Number(num.value)){
-                    par.push(vet.indexOf(vet[pos])) //UM ERRO: ESSA REPETIÇÃO ESTÁ ADICIONANDO O MESMO ÍNDICE NO VETOR PAR. POR QUE?
+                    par.push(pos)
                 }
             }
-            res.innerHTML += `<p>O número digitado está nos índices ${par}.</p>`
-        } else {
-            res.innerHTML += `O número digitado não foi encontrado.`
+            res.innerHTML += `<p>O número digitado está nos índices ${par}</p>`
+        } else{
+            res.innerHTML += `<p>O número digitado não foi encontrado.</p>`
         }
-        
     }
     
 }
