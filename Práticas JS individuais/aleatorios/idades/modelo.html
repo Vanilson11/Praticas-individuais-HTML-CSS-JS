@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisador de Números</title>
+    <title>Analisador de idades</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Analisador de Números</h1>
+        <h1>Analisador de idades</h1>
     </header>
 
     <section>
-        Digite 1 número: <input type="number" name="fnum" id="fnum">
-        <input type="button" value="Adicionar" onclick="buscar()"> <br>
-        <input type="button" value="Limpar" onclick="limpar()">
+        Digite 8 idades: <input type="number" name="fnum" id="fnum">
+        <input type="button" value="Adicionar" onclick="adicionar()"> 
+
+        <input type="button" value="Finalizar" onclick="finalizar()">
 
         <div id="res">
 
@@ -26,6 +27,6 @@
         <p>&copy; Curso em Video</p>
     </footer>
 
-    <script src="findNumVet.js"></script>
+    <script src="idades.js"></script>
 </body>
 </html>
