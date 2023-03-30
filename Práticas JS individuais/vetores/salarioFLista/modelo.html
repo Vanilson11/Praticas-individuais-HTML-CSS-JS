@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisar salários</h1>
+    </header>
+
+    <section>
+        <span id="nome">Digite o nome:</span> <input type="text" name="fname" id="fname"> <br>
+        Sexo: <input type="radio" name="fsex" id="masc" checked>
+        <label for="masc">Masculino</label>
+        <input type="radio" name="fsex" id="fem">
+        <label for="fem">Feminino</label> <br>
+        <span id="idade">Digite o salário atual:</span> <input type="number" name="fsal" id="fsal">
+        <input type="button" value="Adicionar" onclick="adicionar()"> <br>
+
+        <input type="button" value="Analisar" onclick="analisar()">
+
+        <div id="res">
+
+        </div>
+
+        <div id="menor">
+            Lista de mulheres que ganham mais que 5000: <br>
+            <select name="FLista" id="FLista" size="6">
+            </select>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Curso em Video</p>
+    </footer>
+
+    <script src="salarioFLista.js"></script>
+</body>
+</html>
